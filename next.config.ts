@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
   },
  // basePath: "/portfolio", // Replace with your GitHub repo name
  // assetPrefix: "/portfolio", // Important for correct path resolution
+  trailingSlash: true, 
 };
 
 export default nextConfig;

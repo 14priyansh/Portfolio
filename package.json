@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out",
+     "export": "next export",
+  "predeploy": "npm run build && npm run export"
   },
   "dependencies": {
     "@types/react-scroll": "^1.8.10",
