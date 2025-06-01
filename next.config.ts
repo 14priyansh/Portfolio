@@ -1,13 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export", // Needed for static export (next export)
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images:{
-       domains:["C:\Users\shukl\Desktop\portfoilio\portfolio-app\public\self.jpg","i.ibb.co"]
-  }
+  images: {
+    unoptimized: true, // Required for next export
+    domains: ["i.ibb.co","C:\Users\shukl\Desktop\portfoilio\portfolio-app\public\self.jpg"], // Only external URLs work with next/image + export
+  },
+ // basePath: "/portfolio", // Replace with your GitHub repo name
+ // assetPrefix: "/portfolio", // Important for correct path resolution
 };
 
 export default nextConfig;
