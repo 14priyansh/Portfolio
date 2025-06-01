@@ -1,7 +1,8 @@
 'use client'
 import { headerItems, projects } from "@/constants/constant";
 import Image from "next/image";
-
+import type { Projects as ProjectsType } from "@/models/Projects";
+// ...existing code...
 const Projects: React.FC = () => {
 
     return (
@@ -15,7 +16,7 @@ const Projects: React.FC = () => {
                     Object.keys(projects).map(project => (
                         <Image 
                                key={project}
-                            src={projects[project as keyof Projects].image} 
+                            src={projects[project as keyof ProjectsType].image} 
                             alt=""  
                             width={300}
                             height={300}

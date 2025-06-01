@@ -1,6 +1,6 @@
-interface HeaderItem {
+export interface HeaderItem {
           label: string,
-          page: string,
+          page: string
 
 }
 
